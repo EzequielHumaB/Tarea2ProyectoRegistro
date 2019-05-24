@@ -14,9 +14,7 @@ namespace Tarea2ProyectoRegistro.DAL
         public DbSet<Usuario> Usuarios { get; set; }
 
         public Contexto() : base("constStr")
-        {
-
-        }
+        {       }
 
 
 

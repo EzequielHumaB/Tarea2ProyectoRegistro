@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tarea2ProyectoRegistro.UI.Consultas;
+using Tarea2ProyectoRegistro.UI.Registros;
 
 namespace Tarea2ProyectoRegistro
 {
@@ -15,6 +17,20 @@ namespace Tarea2ProyectoRegistro
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void RegistrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UsuariosForm usuarios = new UsuariosForm();
+            usuarios.StartPosition = FormStartPosition.CenterScreen;
+            usuarios.Show();
+        }
+
+        private void ConsultasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaUsuarioForm consulta = new ConsultaUsuarioForm();
+            consulta.StartPosition = FormStartPosition.CenterScreen;
+            consulta.Show();
         }
     }
 }
