@@ -72,7 +72,6 @@
             this.richTextBoxDescripcion.Size = new System.Drawing.Size(100, 56);
             this.richTextBoxDescripcion.TabIndex = 5;
             this.richTextBoxDescripcion.Text = "";
-            this.richTextBoxDescripcion.TextChanged += new System.EventHandler(this.RichTextBoxDescripcion_TextChanged);
             // 
             // buttonNuevo
             // 

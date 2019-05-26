@@ -20,11 +20,7 @@ namespace Tarea2ProyectoRegistro.UI.Registros
             InitializeComponent();
         }
 
-        private void RichTextBoxDescripcion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void Limpiar()
         {
             numericUpDownIdCargo.Value = 0;
