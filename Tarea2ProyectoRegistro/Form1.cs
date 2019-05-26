@@ -32,5 +32,19 @@ namespace Tarea2ProyectoRegistro
             consulta.StartPosition = FormStartPosition.CenterScreen;
             consulta.Show();
         }
+
+        private void CargosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CargosForm cargos = new CargosForm();
+            cargos.StartPosition = FormStartPosition.CenterScreen;
+            cargos.Show();     
+        }
+
+        private void ConsultasDeCargosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaCargos consulta = new ConsultaCargos();
+            consulta.StartPosition = FormStartPosition.CenterScreen;
+            consulta.Show();
+        }
     }
 }

@@ -3,48 +3,48 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tarea2ProyectoRegistro.Entidades;
-using Tarea2ProyectoRegistro.DAL;
 using System.Collections;
 using System.Linq.Expressions;
 using System.Data.Entity;
+using Tarea2ProyectoRegistro.Entidades;
+using Tarea2ProyectoRegistro.DAL;
 
 namespace Tarea2ProyectoRegistro.BLL
 {
-   public class UsuarioClase
+    public class CargoClase
     {
-
-        public static bool guardar(Usuario usuario)
+        public static bool guardar(Cargo cargo)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
             try
             {
-                if (contexto.Usuarios.Add(usuario)!=null)
+                if (contexto.Cargo.Add(cargo) != null)
                 {
                     paso = contexto.SaveChanges() > 0;
 
                 }
 
-            }catch(Exception)
+            }
+            catch (Exception)
             {
                 throw;
             }
             return paso;
-
         }
 
-        public static bool Modificar(Usuario usuario)
+        public static bool Modificar(Cargo cargo)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
             try
             {
-                contexto.Entry(usuario).State = System.Data.Entity.EntityState.Modified;
+                contexto.Entry(cargo).State = System.Data.Entity.EntityState.Modified;
                 paso = (contexto.SaveChanges() > 0);
 
 
-            } catch(Exception)
+            }
+            catch (Exception)
             {
                 throw;
             }
@@ -64,11 +64,12 @@ namespace Tarea2ProyectoRegistro.BLL
 
             try
             {
-                var eliminar = contexto.Usuarios.Find(id);
+                var eliminar = contexto.Cargo.Find(id);
                 contexto.Entry(eliminar).State = System.Data.Entity.EntityState.Deleted;
 
                 paso = (contexto.SaveChanges() > 0);
-            }catch(Exception)
+            }
+            catch (Exception)
             {
                 throw;
             }
@@ -81,33 +82,33 @@ namespace Tarea2ProyectoRegistro.BLL
         }
 
 
-        public static Usuario Buscar(int id)
+        public static Cargo Buscar(int id)
         {
-            Usuario usuario = new Usuario();
+            Cargo cargo = new Cargo();
             Contexto contexto = new Contexto();
             try
             {
-                usuario = contexto.Usuarios.Find(id); 
+                cargo = contexto.Cargo.Find(id);
 
-            }catch(Exception)
+            }
+            catch (Exception)
             {
                 throw;
             }
 
-            return usuario;
+            return cargo;
         }
 
         //Extraer una lista de los usuarios 
-        public static List<Usuario> GetList(Expression<Func<Usuario,bool>>usuario)
+        public static List<Cargo> GetList(Expression<Func<Cargo, bool>> cargo)
         {
-            List<Usuario> lista = new List<Usuario>();
+            List<Cargo> lista = new List<Cargo>();
             Contexto contexto = new Contexto();
             try
             {
-                lista = contexto.Usuarios.Where(usuario).ToList();
-
-
-            } catch(Exception)
+                lista = contexto.Cargo.Where(cargo).ToList();
+            }
+            catch (Exception)
             {
                 throw;
             }

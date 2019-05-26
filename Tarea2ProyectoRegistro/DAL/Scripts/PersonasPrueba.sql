@@ -4,12 +4,23 @@ go
 use PersonasDB
 go
 
-create table Personas
+create table Usuarios
 (
-  Id int primary key identity,
-  nombre varchar(30),
-  Telefono varchar (12),
-  Cedula varchar(13),
-  Direccion varchar(max)
+  IdUsuario int primary key identity,
+  Nombre varchar(30),
+  Email varchar(25),
+  NivelUsuario varchar(20),
+  Usuario varchar(20),
+  Clave varchar(15),
+  FechaIngreso date,
+  CargoID int,
+  DescripcionCargo varchar(100)
 )
+
+
+
+
+
+
+
 

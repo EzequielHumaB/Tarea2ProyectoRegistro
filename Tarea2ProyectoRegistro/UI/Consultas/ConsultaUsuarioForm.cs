@@ -58,5 +58,7 @@ namespace Tarea2ProyectoRegistro.UI.Consultas
             dataGridViewData.DataSource = null;
             dataGridViewData.DataSource = listado;
         }
+
+      
     }
 }

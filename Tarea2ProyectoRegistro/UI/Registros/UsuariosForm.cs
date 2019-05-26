@@ -64,7 +64,6 @@ namespace Tarea2ProyectoRegistro.UI.Registros
             textBoxNivelUsuario.Text = usuario.NivelUsuario;
             textBoxClave.Text = usuario.Clave;
             dateTimePickerFechaIngreso.Value = usuario.FechaIngreso;
-            
         }
 
         public bool valirdar()
@@ -113,8 +112,9 @@ namespace Tarea2ProyectoRegistro.UI.Registros
                 textBoxClave.Focus();
                 paso = false;
             }
+
             return paso;
-              
+          
         }
 
         private bool ExisteEnLaBaseDeDatos()
@@ -190,13 +190,17 @@ namespace Tarea2ProyectoRegistro.UI.Registros
             } else
             {
                 MessageBox.Show("No se puede eliminar a una persona que no existe");
-
             }
+        }
+
+        private void NumericUpDownidCargo_ValueChanged(object sender, EventArgs e)
+        {
 
         }
 
+        private void TextBoxCargoDescripcion_TextChanged(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }
