@@ -17,7 +17,11 @@ create table Usuarios
   DescripcionCargo varchar(100)
 )
 
-
+create table Cargo
+(
+  CargoId int primary key,
+  DescripcionCargo varchar(50)
+)
 
 
 

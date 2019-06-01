@@ -61,7 +61,6 @@ namespace Tarea2ProyectoRegistro.BLL
         {
             bool paso = false;
             Contexto contexto = new Contexto();
-
             try
             {
                 var eliminar = contexto.Usuarios.Find(id);
